@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!-- Compute latency from hrf (i1) and time derivative (i2) effect size. See Henson-->
+<!-- et.al. NeuroImage 15,83-97 (2002) for details.-->
+<matfile>
+   <jobs type="cell" size="[1 1]">
+      <cell index="1" type="struct" size="[1 1]">
+         <util index="1" type="cell" size="[1 1]">
+            <cell index="1" type="struct" size="[1 1]">
+               <imcalc index="1" type="struct" size="[1 1]">
+                  <input index="1" type="char" size="[1 11]">
+                     &lt;UNDEFINED&gt;
+                  </input>
+                  <output index="1" type="char" size="[0 0]">
+                     
+                  </output>
+                  <expression index="1" type="char" size="[1 28]">
+                     2*1.78./(1+exp(3.10*i2./i1))-1.78
+                  </expression>
+                  <options index="1" type="struct" size="[1 1]">
+                     <dmtx index="1" type="double" size="[1 1]">
+                        [ 0]
+                     </dmtx>
+                     <mask index="1" type="double" size="[1 1]">
+                        [ 0]
+                     </mask>
+                     <interp index="1" type="double" size="[1 1]">
+                        [ 0]
+                     </interp>
+                     <dtype index="1" type="double" size="[1 1]">
+                        [ 64]
+                     </dtype>
+                  </options>
+               </imcalc>
+            </cell>
+         </util>
+      </cell>
+   </jobs>
+</matfile>

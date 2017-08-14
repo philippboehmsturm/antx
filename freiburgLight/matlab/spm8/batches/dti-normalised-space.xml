@@ -1,0 +1,553 @@
+<?xml version="1.0" ?>
+<matfile>
+   <jobs type="cell" size="[1 3]">
+      <cell index="1" type="struct" size="[1 1]">
+         <util index="1" type="cell" size="[1 1]">
+            <cell index="1" type="struct" size="[1 1]">
+               <md index="1" type="struct" size="[1 1]">
+                  <basedir index="1" type="char" size="[1 11]">
+                     &lt;UNDEFINED&gt;
+                  </basedir>
+                  <name index="1" type="char" size="[1 7]">
+                     wtensor
+                  </name>
+               </md>
+            </cell>
+         </util>
+      </cell>
+      <cell index="2" type="struct" size="[1 1]">
+         <spatial index="1" type="cell" size="[1 3]">
+            <cell index="1" type="struct" size="[1 1]">
+               <coreg index="1" type="cell" size="[1 1]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <estimate index="1" type="struct" size="[1 1]">
+                        <ref index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </ref>
+                        <source index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </source>
+                        <other index="1" type="cell" size="[1 1]">
+                           <cell index="1" type="char" size="[0 0]">
+                              
+                           </cell>
+                        </other>
+                        <eoptions index="1" type="struct" size="[1 1]">
+                           <cost_fun index="1" type="char" size="[1 3]">
+                              nmi
+                           </cost_fun>
+                           <sep index="1" type="double" size="[1 2]">
+                              [4 2]
+                           </sep>
+                           <tol index="1" type="double" size="[1 12]">
+                              [0.02 0.02 0.02 0.001 0.001 0.001 0.01 0.01 0.01 0.001 0.001 0.001]
+                           </tol>
+                           <fwhm index="1" type="double" size="[1 2]">
+                              [7 7]
+                           </fwhm>
+                        </eoptions>
+                     </estimate>
+                  </cell>
+               </coreg>
+            </cell>
+            <cell index="2" type="struct" size="[1 1]">
+               <preproc index="1" type="struct" size="[1 1]">
+                  <data index="1" type="char" size="[1 11]">
+                     &lt;UNDEFINED&gt;
+                  </data>
+                  <output index="1" type="struct" size="[1 1]">
+                     <GM index="1" type="double" size="[1 3]">
+                        [0 0 1]
+                     </GM>
+                     <WM index="1" type="double" size="[1 3]">
+                        [0 0 1]
+                     </WM>
+                     <CSF index="1" type="double" size="[1 3]">
+                        [0 0 0]
+                     </CSF>
+                     <biascor index="1" type="double" size="[1 1]">
+                        [ 1]
+                     </biascor>
+                     <cleanup index="1" type="double" size="[1 1]">
+                        [ 0]
+                     </cleanup>
+                  </output>
+                  <opts index="1" type="struct" size="[1 1]">
+                     <tpm index="1" type="cell" size="[3 1]">
+                        <cell index="1" type="char" size="[1 23]">
+                           /apps/spm5/tpm/grey.nii
+                        </cell>
+                        <cell index="2" type="char" size="[1 24]">
+                           /apps/spm5/tpm/white.nii
+                        </cell>
+                        <cell index="3" type="char" size="[1 22]">
+                           /apps/spm5/tpm/csf.nii
+                        </cell>
+                     </tpm>
+                     <ngaus index="1" type="double" size="[1 4]">
+                        [2 2 2 4]
+                     </ngaus>
+                     <regtype index="1" type="char" size="[1 3]">
+                        mni
+                     </regtype>
+                     <warpreg index="1" type="double" size="[1 1]">
+                        [ 1]
+                     </warpreg>
+                     <warpco index="1" type="double" size="[1 1]">
+                        [ 25]
+                     </warpco>
+                     <biasreg index="1" type="double" size="[1 1]">
+                        [ 0.0001]
+                     </biasreg>
+                     <biasfwhm index="1" type="double" size="[1 1]">
+                        [ 60]
+                     </biasfwhm>
+                     <samp index="1" type="double" size="[1 1]">
+                        [ 3]
+                     </samp>
+                     <msk index="1" type="cell" size="[1 1]">
+                        <cell index="1" type="char" size="[0 0]">
+                           
+                        </cell>
+                     </msk>
+                  </opts>
+               </preproc>
+            </cell>
+            <cell index="3" type="struct" size="[1 1]">
+               <normalise index="1" type="cell" size="[1 2]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <write index="1" type="struct" size="[1 1]">
+                        <subj index="1" type="struct" size="[1 1]">
+                           <matname index="1" type="char" size="[1 11]">
+                              &lt;UNDEFINED&gt;
+                           </matname>
+                           <resample index="1" type="char" size="[1 11]">
+                              &lt;UNDEFINED&gt;
+                           </resample>
+                        </subj>
+                        <roptions index="1" type="struct" size="[1 1]">
+                           <preserve index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </preserve>
+                           <bb index="1" type="double" size="[2 3]">
+                              [-78 78 -112 76 -50 85]
+                           </bb>
+                           <vox index="1" type="double" size="[1 3]">
+                              [1 1 1]
+                           </vox>
+                           <interp index="1" type="double" size="[1 1]">
+                              [ 4]
+                           </interp>
+                           <wrap index="1" type="double" size="[1 3]">
+                              [0 0 0]
+                           </wrap>
+                        </roptions>
+                     </write>
+                  </cell>
+                  <cell index="2" type="struct" size="[1 1]">
+                     <write index="1" type="struct" size="[1 1]">
+                        <subj index="1" type="struct" size="[1 1]">
+                           <matname index="1" type="char" size="[1 11]">
+                              &lt;UNDEFINED&gt;
+                           </matname>
+                           <resample index="1" type="char" size="[1 11]">
+                              &lt;UNDEFINED&gt;
+                           </resample>
+                        </subj>
+                        <roptions index="1" type="struct" size="[1 1]">
+                           <preserve index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </preserve>
+                           <bb index="1" type="double" size="[2 3]">
+                              [-78 78 -112 76 -50 85]
+                           </bb>
+                           <vox index="1" type="char" size="[1 11]">
+                              &lt;UNDEFINED&gt;
+                           </vox>
+                           <interp index="1" type="double" size="[1 1]">
+                              [ 1]
+                           </interp>
+                           <wrap index="1" type="double" size="[1 3]">
+                              [0 0 0]
+                           </wrap>
+                        </roptions>
+                     </write>
+                  </cell>
+               </normalise>
+            </cell>
+         </spatial>
+      </cell>
+      <cell index="3" type="struct" size="[1 1]">
+         <tools index="1" type="cell" size="[1 2]">
+            <cell index="1" type="struct" size="[1 1]">
+               <vgtbx_Volumes index="1" type="cell" size="[1 1]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <Multiple_Volumes index="1" type="struct" size="[1 1]">
+                        <tbxvol_create_mask index="1" type="struct" size="[1 1]">
+                           <maskspec index="1" type="struct" size="[1 1]">
+                              <maskdef index="1" type="struct" size="[1 1]">
+                                 <srcimgs index="1" type="char" size="[1 11]">
+                                    &lt;UNDEFINED&gt;
+                                 </srcimgs>
+                                 <mtype index="1" type="struct" size="[1 1]">
+                                    <maskcustom index="1" type="char" size="[1 10]">
+                                       (i1+i2)&gt;.5
+                                    </maskcustom>
+                                 </mtype>
+                                 <outimg index="1" type="struct" size="[1 1]">
+                                    <swd index="1" type="char" size="[1 11]">
+                                       &lt;UNDEFINED&gt;
+                                    </swd>
+                                    <fname index="1" type="char" size="[1 14]">
+                                       wbrainmask.img
+                                    </fname>
+                                 </outimg>
+                              </maskdef>
+                           </maskspec>
+                           <srcspec index="1" type="struct" size="[0 0]"/>
+                        </tbxvol_create_mask>
+                     </Multiple_Volumes>
+                  </cell>
+               </vgtbx_Volumes>
+            </cell>
+            <cell index="2" type="struct" size="[1 1]">
+               <vgtbx_Diffusion index="1" type="cell" size="[1 4]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <dti_reorient_gradient index="1" type="struct" size="[1 1]">
+                        <srcimgs index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </srcimgs>
+                        <tgtimgs index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </tgtimgs>
+                        <snparams index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </snparams>
+                     </dti_reorient_gradient>
+                  </cell>
+                  <cell index="2" type="struct" size="[1 1]">
+                     <dti_dt_regress index="1" type="struct" size="[1 1]">
+                        <srcimgs index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </srcimgs>
+                        <errorvar index="1" type="struct" size="[1 1]">
+                           <errauto index="1" type="struct" size="[1 1]">
+                              <ltol index="1" type="double" size="[1 1]">
+                                 [ 10]
+                              </ltol>
+                              <dtol index="1" type="double" size="[1 1]">
+                                 [ 0]
+                              </dtol>
+                              <sep index="1" type="double" size="[1 1]">
+                                 [ 0]
+                              </sep>
+                           </errauto>
+                        </errorvar>
+                        <dtorder index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </dtorder>
+                        <maskimg index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </maskimg>
+                        <swd index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </swd>
+                     </dti_dt_regress>
+                  </cell>
+                  <cell index="3" type="struct" size="[1 1]">
+                     <dti_indices index="1" type="struct" size="[1 1]">
+                        <dtimg index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </dtimg>
+                        <option index="1" type="char" size="[1 1]">
+                           f
+                        </option>
+                     </dti_indices>
+                  </cell>
+                  <cell index="4" type="struct" size="[1 1]">
+                     <dti_eig index="1" type="struct" size="[1 1]">
+                        <dtimg index="1" type="char" size="[1 11]">
+                           &lt;UNDEFINED&gt;
+                        </dtimg>
+                        <dteigopts index="1" type="char" size="[1 2]">
+                           vl
+                        </dteigopts>
+                     </dti_eig>
+                  </cell>
+               </vgtbx_Diffusion>
+            </cell>
+         </tools>
+      </cell>
+   </jobs>
+   <jobhelps type="cell" size="[1 3]">
+      <cell index="1" type="struct" size="[1 1]">
+         <util index="1" type="cell" size="[1 1]">
+            <cell index="1" type="struct" size="[1 1]">
+               <md index="1" type="struct" size="[1 1]">
+                  <basedir index="1" type="char" size="[1 29]">
+                     The current subject&apos;s folder.
+                  </basedir>
+                  <name index="1" type="double" size="[0 0]">
+                     []
+                  </name>
+               </md>
+            </cell>
+         </util>
+      </cell>
+      <cell index="2" type="struct" size="[1 1]">
+         <spatial index="1" type="cell" size="[1 3]">
+            <cell index="1" type="struct" size="[1 1]">
+               <coreg index="1" type="cell" size="[1 1]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <estimate index="1" type="struct" size="[1 1]">
+                        <ref index="1" type="cell" size="[1 1]">
+                           <cell index="1" type="char" size="[1 39]">
+                              The first (b0) image of the DWI series.
+                           </cell>
+                        </ref>
+                        <source index="1" type="cell" size="[1 1]">
+                           <cell index="1" type="char" size="[1 13]">
+                              The T1 image.
+                           </cell>
+                        </source>
+                        <other index="1" type="double" size="[0 0]">
+                           []
+                        </other>
+                        <eoptions index="1" type="struct" size="[1 1]">
+                           <cost_fun index="1" type="double" size="[0 0]">
+                              []
+                           </cost_fun>
+                           <sep index="1" type="double" size="[0 0]">
+                              []
+                           </sep>
+                           <tol index="1" type="double" size="[0 0]">
+                              []
+                           </tol>
+                           <fwhm index="1" type="double" size="[0 0]">
+                              []
+                           </fwhm>
+                        </eoptions>
+                     </estimate>
+                  </cell>
+               </coreg>
+            </cell>
+            <cell index="2" type="struct" size="[1 1]">
+               <preproc index="1" type="struct" size="[1 1]">
+                  <data index="1" type="char" size="[1 37]">
+                     Input to Coreg:Estimate-&gt;Source Image
+                  </data>
+                  <output index="1" type="struct" size="[1 1]">
+                     <GM index="1" type="double" size="[0 0]">
+                        []
+                     </GM>
+                     <WM index="1" type="double" size="[0 0]">
+                        []
+                     </WM>
+                     <CSF index="1" type="double" size="[0 0]">
+                        []
+                     </CSF>
+                     <biascor index="1" type="double" size="[0 0]">
+                        []
+                     </biascor>
+                     <cleanup index="1" type="double" size="[0 0]">
+                        []
+                     </cleanup>
+                  </output>
+                  <opts index="1" type="struct" size="[1 1]">
+                     <tpm index="1" type="double" size="[0 0]">
+                        []
+                     </tpm>
+                     <ngaus index="1" type="double" size="[0 0]">
+                        []
+                     </ngaus>
+                     <regtype index="1" type="double" size="[0 0]">
+                        []
+                     </regtype>
+                     <warpreg index="1" type="double" size="[0 0]">
+                        []
+                     </warpreg>
+                     <warpco index="1" type="double" size="[0 0]">
+                        []
+                     </warpco>
+                     <biasreg index="1" type="double" size="[0 0]">
+                        []
+                     </biasreg>
+                     <biasfwhm index="1" type="double" size="[0 0]">
+                        []
+                     </biasfwhm>
+                     <samp index="1" type="double" size="[0 0]">
+                        []
+                     </samp>
+                     <msk index="1" type="double" size="[0 0]">
+                        []
+                     </msk>
+                  </opts>
+               </preproc>
+            </cell>
+            <cell index="3" type="struct" size="[1 1]">
+               <normalise index="1" type="cell" size="[1 2]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <write index="1" type="struct" size="[1 1]">
+                        <subj index="1" type="struct" size="[1 1]">
+                           <matname index="1" type="char" size="[1 28]">
+                              The _seg_sn.mat from segment
+                           </matname>
+                           <resample index="1" type="char" size="[1 23]">
+                              The segments of the T1.
+                           </resample>
+                        </subj>
+                        <roptions index="1" type="struct" size="[1 1]">
+                           <preserve index="1" type="double" size="[0 0]">
+                              []
+                           </preserve>
+                           <bb index="1" type="double" size="[0 0]">
+                              []
+                           </bb>
+                           <vox index="1" type="double" size="[0 0]">
+                              []
+                           </vox>
+                           <interp index="1" type="double" size="[0 0]">
+                              []
+                           </interp>
+                           <wrap index="1" type="double" size="[0 0]">
+                              []
+                           </wrap>
+                        </roptions>
+                     </write>
+                  </cell>
+                  <cell index="2" type="struct" size="[1 1]">
+                     <write index="1" type="struct" size="[1 1]">
+                        <subj index="1" type="struct" size="[1 1]">
+                           <matname index="1" type="char" size="[1 15]">
+                              The _seg_sn.mat
+                           </matname>
+                           <resample index="1" type="char" size="[1 14]">
+                              The DWI images
+                           </resample>
+                        </subj>
+                        <roptions index="1" type="struct" size="[1 1]">
+                           <preserve index="1" type="double" size="[0 0]">
+                              []
+                           </preserve>
+                           <bb index="1" type="double" size="[0 0]">
+                              []
+                           </bb>
+                           <vox index="1" type="char" size="[1 46]">
+                              Put in something close to your DWI voxel size.
+                           </vox>
+                           <interp index="1" type="double" size="[0 0]">
+                              []
+                           </interp>
+                           <wrap index="1" type="double" size="[0 0]">
+                              []
+                           </wrap>
+                        </roptions>
+                     </write>
+                  </cell>
+               </normalise>
+            </cell>
+         </spatial>
+      </cell>
+      <cell index="3" type="struct" size="[1 1]">
+         <tools index="1" type="cell" size="[1 2]">
+            <cell index="1" type="struct" size="[1 1]">
+               <vgtbx_Volumes index="1" type="cell" size="[1 1]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <Multiple_Volumes index="1" type="struct" size="[1 1]">
+                        <tbxvol_create_mask index="1" type="struct" size="[1 1]">
+                           <maskspec index="1" type="struct" size="[1 1]">
+                              <maskdef index="1" type="struct" size="[1 1]">
+                                 <srcimgs index="1" type="char" size="[1 23]">
+                                    The normalised segments
+                                 </srcimgs>
+                                 <mtype index="1" type="struct" size="[1 1]">
+                                    <maskcustom index="1" type="double" size="[0 0]">
+                                       []
+                                    </maskcustom>
+                                 </mtype>
+                                 <outimg index="1" type="struct" size="[1 1]">
+                                    <swd index="1" type="char" size="[1 20]">
+                                       The T1 image folder.
+                                    </swd>
+                                    <fname index="1" type="double" size="[0 0]">
+                                       []
+                                    </fname>
+                                 </outimg>
+                              </maskdef>
+                           </maskspec>
+                           <srcspec index="1" type="struct" size="[0 0]"/>
+                        </tbxvol_create_mask>
+                     </Multiple_Volumes>
+                  </cell>
+               </vgtbx_Volumes>
+            </cell>
+            <cell index="2" type="struct" size="[1 1]">
+               <vgtbx_Diffusion index="1" type="cell" size="[1 4]">
+                  <cell index="1" type="struct" size="[1 1]">
+                     <dti_reorient_gradient index="1" type="struct" size="[1 1]">
+                        <srcimgs index="1" type="char" size="[1 38]">
+                           Input to Normalise-&gt;Write (DWI images)
+                        </srcimgs>
+                        <tgtimgs index="1" type="char" size="[1 41]">
+                           Output from Normalise-&gt;Write (DWI images)
+                        </tgtimgs>
+                        <snparams index="1" type="char" size="[1 39]">
+                           The _seg_sn.mat used for normalisation.
+                        </snparams>
+                     </dti_reorient_gradient>
+                  </cell>
+                  <cell index="2" type="struct" size="[1 1]">
+                     <dti_dt_regress index="1" type="struct" size="[1 1]">
+                        <srcimgs index="1" type="char" size="[1 20]">
+                           The normalised DWIs.
+                        </srcimgs>
+                        <errorvar index="1" type="struct" size="[1 1]">
+                           <errauto index="1" type="struct" size="[1 1]">
+                              <ltol index="1" type="double" size="[0 0]">
+                                 []
+                              </ltol>
+                              <dtol index="1" type="double" size="[0 0]">
+                                 []
+                              </dtol>
+                              <sep index="1" type="double" size="[0 0]">
+                                 []
+                              </sep>
+                           </errauto>
+                        </errorvar>
+                        <dtorder index="1" type="double" size="[0 0]">
+                           []
+                        </dtorder>
+                        <maskimg index="1" type="char" size="[1 30]">
+                           Output from Create&amp;Apply Masks
+                        </maskimg>
+                        <swd index="1" type="char" size="[1 26]">
+                           Output from Make Directory
+                        </swd>
+                     </dti_dt_regress>
+                  </cell>
+                  <cell index="3" type="struct" size="[1 1]">
+                     <dti_indices index="1" type="struct" size="[1 1]">
+                        <dtimg index="1" type="double" size="[0 0]">
+                           []
+                        </dtimg>
+                        <option index="1" type="double" size="[0 0]">
+                           []
+                        </option>
+                     </dti_indices>
+                  </cell>
+                  <cell index="4" type="struct" size="[1 1]">
+                     <dti_eig index="1" type="struct" size="[1 1]">
+                        <dtimg index="1" type="double" size="[0 0]">
+                           []
+                        </dtimg>
+                        <dteigopts index="1" type="double" size="[0 0]">
+                           []
+                        </dteigopts>
+                     </dti_eig>
+                  </cell>
+               </vgtbx_Diffusion>
+            </cell>
+         </tools>
+      </cell>
+   </jobhelps>
+</matfile>

@@ -1,0 +1,12 @@
+TODO list for rfxplot
+* export data into a struct array that can be reused in different runs
+* implement an across-subject correlation between BOLD and a external
+  variable in a non-Voodoo way
+* include an additional adjustment option that removes the effect of
+  all other regressor, except those that belong to the current event
+  type (e.g. the current onset regressor and all associated pmods)
+* PSC for time courses
+* implement PSTH like in SPM as an additional option (not just
+  event-related averaging)
+* extract data from PPI analysis. Regressors are stored in SPM.xX.C
+  partition

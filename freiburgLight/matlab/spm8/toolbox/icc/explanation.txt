@@ -1,0 +1,86 @@
+From tobias.freyer@uniklinik-freiburg.de Fri Mar 23 14:20:56 2007
+Date: Fri, 23 Mar 2007 14:19:40 +0100
+From: Tobias Freyer <tobias.freyer@uniklinik-freiburg.de>
+To: volkmar.glauche@uniklinik-freiburg.de
+Subject: Antwort von Russell Poldrack
+
+Hi Volkmar,
+die Amis sind echt schnell und hilfsbereit... Hier der Matlab-Code, den die
+benutzt haben und die Erklärung in seiner mail. SIeht doch relativ kurz und
+übersichtlich aus, allerdings für spm99 programmiert. Kannst Du mal bitte da
+rein schauen?
+Danke und Gruß,
+Tobias
+
+Hi Tobias,
+
+attached is an archive containing two matlab files
+
+compute_icc_wholebrain.m
+icc.m
+
+and the image icc_map_allvals.hdr (.img)
+
+before you start you will need 2 images for each of your subjects,  these
+should be contrast
+images.
+
+you will need to alter some code in icc.m because it expects 2 images  from 8
+subjects. if you have a different number of subjects change 8  to that
+number.
+
+you should use spm99 and matlab.
+
+at the matlab prompt type "compute_icc_wholebrain.m"
+it should fire up a spm window that wants the contrast images for  your
+subjects, for session 1, and then once you select those it will  fire up a new
+window for the images for session 2. then it takes a  while to run - maybe 5
+minutes - sorry i'm not the best
+programmer.
+
+it saves a matrix called icc_matrix_allvals.mat which hase ICC vals  at each
+voxel.
+
+but for you to see this as an image you need to save it as such. a  new window
+will fire up to ask you to select an image. select  icc_map_allvals.hdr and
+your'e done. now you can look at this image  with spm display or mricro or
+whatever you
+want.
+
+details are in our neuroimage paper, also there is some explanation  in the
+matlab files i wrote, e.g. pointing you to a website about  ICC. the ICC
+values i get were verified against running ICC in SPSS  for one
+voxel.
+
+hope this helps
+
+
+--
+Dr. med. Tobias Freyer
+
+UNIVERSITÄTSKLINIKUM FREIBURG
+Abteilung fuer Psychiatrie und Psychotherapie
+
+Tel +49 761 270-5040
+Hauptstrasse 5, 79104 Freiburg
+tobias.freyer@uniklinik-freiburg.de
+http://www.uniklinik-freiburg.de
+
+    [ Part 2, Text/X-OBJCSRC (charset: UTF-8 "Internet-standard ]
+    [ Unicode") (Name: "compute_icc_wholebrain.m")  42 lines. ]
+    [ Unable to print this part. ]
+
+
+    [ Part 3, Text/X-OBJCSRC (charset: UTF-8 "Internet-standard ]
+    [ Unicode") (Name: "icc.m")  32 lines. ]
+    [ Unable to print this part. ]
+
+
+    [ Part 4, Application/OCTET-STREAM (Name: "icc_map_allvals.hdr") ]
+    [ 478bytes. ]
+    [ Unable to print this part. ]
+
+
+    [ Part 5, Application/X-EXECUTABLE-FILE  4.9MB. ]
+    [ Unable to print this part. ]
+

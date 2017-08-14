@@ -1,0 +1,102 @@
+<?xml version="1.0" ?>
+<matfile>
+   <jobs type="cell" size="[1 1]">
+      <cell index="1" type="struct" size="[1 1]">
+         <stats index="1" type="cell" size="[1 1]">
+            <cell index="1" type="struct" size="[1 1]">
+               <factorial_design index="1" type="struct" size="[1 1]">
+                  <des index="1" type="struct" size="[1 1]">
+                     <fblock index="1" type="struct" size="[1 1]">
+                        <fac index="1" type="struct" size="[1 2]">
+                           <name index="1" type="char" size="[1 7]">
+                              subject
+                           </name>
+                           <dept index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </dept>
+                           <variance index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </variance>
+                           <gmsca index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </gmsca>
+                           <ancova index="1" type="double" size="[1 1]">
+                              [ 0]
+                           </ancova>
+                           <name index="2" type="char" size="[1 9]">
+                              condition
+                           </name>
+                           <dept index="2" type="double" size="[1 1]">
+                              [ 1]
+                           </dept>
+                           <variance index="2" type="double" size="[1 1]">
+                              [ 1]
+                           </variance>
+                           <gmsca index="2" type="double" size="[1 1]">
+                              [ 0]
+                           </gmsca>
+                           <ancova index="2" type="double" size="[1 1]">
+                              [ 0]
+                           </ancova>
+                        </fac>
+                        <fsuball index="1" type="struct" size="[1 1]">
+                           <fsubject index="1" type="struct" size="[0 0]"/>
+                        </fsuball>
+                        <maininters index="1" type="cell" size="[1 2]">
+                           <cell index="1" type="struct" size="[1 1]">
+                              <fmain index="1" type="struct" size="[1 1]">
+                                 <fnum index="1" type="double" size="[1 1]">
+                                    [ 1]
+                                 </fnum>
+                              </fmain>
+                           </cell>
+                           <cell index="2" type="struct" size="[1 1]">
+                              <fmain index="1" type="struct" size="[1 1]">
+                                 <fnum index="1" type="double" size="[1 1]">
+                                    [ 2]
+                                 </fnum>
+                              </fmain>
+                           </cell>
+                        </maininters>
+                     </fblock>
+                  </des>
+                  <cov index="1" type="struct" size="[0 0]"/>
+                  <masking index="1" type="struct" size="[1 1]">
+                     <tm index="1" type="struct" size="[1 1]">
+                        <tm_none index="1" type="double" size="[0 0]">
+                           []
+                        </tm_none>
+                     </tm>
+                     <im index="1" type="double" size="[1 1]">
+                        [ 1]
+                     </im>
+                     <em index="1" type="cell" size="[1 1]">
+                        <cell index="1" type="char" size="[0 0]">
+                           
+                        </cell>
+                     </em>
+                  </masking>
+                  <globalc index="1" type="struct" size="[1 1]">
+                     <g_omit index="1" type="double" size="[0 0]">
+                        []
+                     </g_omit>
+                  </globalc>
+                  <globalm index="1" type="struct" size="[1 1]">
+                     <gmsca index="1" type="struct" size="[1 1]">
+                        <gmsca_no index="1" type="double" size="[0 0]">
+                           []
+                        </gmsca_no>
+                     </gmsca>
+                     <glonorm index="1" type="double" size="[1 1]">
+                        [ 1]
+                     </glonorm>
+                  </globalm>
+                  <dir index="1" type="char" size="[1 11]">
+                     &lt;UNDEFINED&gt;
+                  </dir>
+               </factorial_design>
+            </cell>
+         </stats>
+      </cell>
+   </jobs>
+</matfile>

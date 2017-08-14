@@ -1,0 +1,227 @@
+
+========================================================================
+     NON-STATIONARITY CORRECTION TOOLBOX FOR CLUSTER SIZE P-VALUES
+========================================================================
+
+
+
+0. Disclaimer
+------------------------------------------------------------------------
+This toolbox is stil in a beta version. The toolbox is distributed
+as is, without any warranty. 
+
+
+
+
+1. Introduction
+------------------------------------------------------------------------
+Non-stationarity, or non-uniform smoothness, in brain imaging data
+is problematic in statistical inference based on cluster extent, 
+or a cluster size test. If the smoothness is not uniform, then there 
+are smooth regions and rough regions within the image data. In rough 
+regions, clusters tend to be small and activations/effects/differences 
+may not be easily detected. On the other hand, in smooth regions, 
+clusters tend to be large regardless of signals, resulting in increased 
+false positives. Non-stationarity is particularly a problem in VBM 
+(voxel-based morphometry) data where images are heavily warped to match
+a template. Use of cluster p-values in VBM analysis has been 
+discouraged [1].
+
+To overcome this problem, Worsley et al [2] suggested a correction method.
+In this method, cluster sizes are adjusted according to their local 
+smoothness. In brief, clusters in smooth areas are shrunk, while clusters 
+in rough areas are expanded to account for differences in smoothness. 
+This non-stationarity correction can be implemented parametrically using 
+random field theory (RFT) or non-parametrically by a permutation 
+test [3]. The parametric version of the non-stationarity correction has 
+been implemented in the FMRISTAT package as a part of STAT_THRESHOLD 
+function. Accounting for non-stationarity is important as it could 
+lead to an erroneous outcome of a VBM analysis, as demonstrated
+in Moorhead et al [4]. 
+
+This toolbox is an SPM version of non-stationarity correction. 
+The STAT_THRESHOLD function has been ported to SPM so that it can
+interface with SPM analysis results.
+
+
+
+
+2. Installation
+------------------------------------------------------------------------
+2.0 SPM version
+This package has been successfully tested on SPM2 and SPM5 on a PC,
+with MATLAB version 7.1. 
+
+2.1 Downloading
+This package comes in a tar-ziped file, containing the following five
+programs:
+
+-spm_ns.m
+-spm_list_nS.m
+-spm_max_nS.m
+-stat_thresh.m
+-spm_results_ui_nS.m
+
+2.2 Installation
+To install, you save the downloaded archive file under the toolbox folder 
+in your SPM. Then untar / unzip the file. A folder named ns will be 
+created. 
+
+
+
+
+
+3. Usage
+------------------------------------------------------------------------
+This toolbox functions much like the "RESULTS" button on SPM. After 
+defining the model and estimating, instead of pressing the RESULTS
+button, select "ns" under the "toolbox" pull down menu. 
+
+Then you will go through the process quite similar to the RESULTS
+portion of SPM. At the end, this toolbox produces a table of p-values
+just like a typical SPM analysis. In the table, cluster sizes are
+expressed in terms of voxels as well as RESELs. The corrected p-values
+are corrected for non-stationarity. The uncorrected p-values are based on 
+cluster sizes in RESELs rather than voxels as well. The voxel-level 
+p-values are identical to that of the SPM results. The voxel-level
+p-values are listed in the same order as the SPM results (for T-test
+only).  
+
+You can obtain the cluster sizes in terms of voxels, without 
+non-stationarity correction by clicking the "Results" button. 
+
+
+
+
+
+4. For Interested Users
+------------------------------------------------------------------------
+Interested users can learn how the non-stationarity correction works
+from [3] below. Also, [2] gives an excellent overview of the concept
+of non-stationarity correction.
+
+
+
+
+5. Bugs / Updates
+------------------------------------------------------------------------
+Please note that this release is still a beta version. Thus it is quite
+possible that there are some bugs, typos, and other errors in the scripts.
+If you find any bugs, or if you have any questions / complaints / suggestions,
+you can contact me (Satoru Hayasaka) at shayasak_at_wfubmc_dot_edu. 
+
+DATE:    Feb 19, 2007
+BUG:     Variable nvar not integer.
+DETAILS: Variable nvar in stat_thresh function is treated as a double
+         rather than an integer. This causes some warnings and errors
+         in the program.
+FIX:     In stat_thresh function, nvar is rounded so that it will be
+         treated as an integer.
+UPDATE:  stat_thresh has been updated. The latest distribution includes
+         the latest version (ver 0.76b) of stat_thresh function.
+
+
+DATE:    Mar 28, 2007
+BUG:     Cluster p-values not available for F-images
+DETAILS: This is not a bug, but a shortcoming in SPM. SPM cannot calculate
+         cluster p-values for F-tests. 
+FIX:     Cluster p-values from from stat_thresh function [2,3] are passed 
+         on and displayed in the output. The p-values are corrected for
+         non-sationarity. 
+UPDATE:  spm_list_nS function has been updated to implement the change
+         described above. The latest distribution includes the latest
+         version (ver 0.8b) of spm_list_nS. 
+
+
+DATE:    Mar 28, 2007
+BUG:     Toolbox pull-down menu
+DETAILS: Now this package can be invoked from the 'toolbox' pull-down menu
+         if installed appropriately.
+UPDATE:  The latest distribution includes spm_ns.m, which drives this whole
+         package.
+
+
+DATE:    Apr 17, 2007
+BUG:     Variables hReg, xSPM, SPM are not available
+DETAILS: After running the non-stationarity extension, the variables hReg,
+         xSPM, and SPM are not available.
+UPDATE:  The latest distribution outputs these variables in the workspace,
+         so users can click on other buttons ('volume', 'cluster', etc) after
+         running the non-stationarity extension.
+
+
+DATE:    Apr 17, 2007
+BUG:     Set-level results taking too much space
+DETAILS: In the SPM output, the set-level inference results are taking up two
+         columns, although very few people use the set-level p-value.
+UPDATE:  The updated version of spm_list_nS (ver 0.81b) eliminated the first two
+         columns of the set-level results. The set-level results are now displayed
+         in the footer for interested users.
+
+
+DATE:    Feb 11, 2008
+BUG:     Cluster p-values unavailable for F-contrasts under stationarity
+DETAILS: The NS toolbox assumes non-stationarity. Cluster sizes are adjusted based
+         on RPV no matter what.
+UPDATE:  The updated version of spm_list_nS (ver 0.82b) can calculate cluster 
+         p-values, both for T- and F-contrasts under stationarity, provided that
+         a global variable ASSUME_STATIONARY=1. Otherwise cluster p-values are
+         calculated assuming non-stationarity. In the results, the table header 
+         for clusters displays whether cluster p-values are calculated under 
+         stationarity or non-stationarity.
+ 
+
+
+
+
+
+
+
+
+6. Acknowledgements
+------------------------------------------------------------------------
+The theoretical work, as well as the main statistical programing was done by
+Dr. Keith Worsley of McGill University. I would like to thank him for the
+permission to port his STAT_THRESHOLD function into SPM.
+
+Also I would like to thank Dr. Tom Nichols of GlaxoSmithKline for useful 
+discussions during the development of this toolbox.
+
+This Human Brain Project / Neuroinformatics research (R01-MH069326) 
+is supported by the National Institute of Mental Health, the National
+Institute on Aging, and the National Institute of Biomedical Imaging and
+Bioengineering. 
+
+
+
+
+
+7. References
+------------------------------------------------------------------------
+[1]. Ashburner J & Friston K J
+     Voxel-based morphometry --- the methods
+     NeuroImage 11: 805-821 (2000)
+[2]. Worsley K J, Andermann M, Koulis T, MacDonald D & Evans A C
+     Detecting changes in nonisotropic images
+     Human Brain Mapping 8: 98-101 (1999)
+[3]. Hayasaka S, Phan K L, Liberzon I, Worsley K J & Nichols T E
+     Nonstationary cluster-size inference with random field and permutation
+     methods
+     NeuroImage 22: 676-687 (2004)
+[4]. Moorhead T W J, Job D E, Spencer M D, Whalley H C, Johnstone E C & Lawrie S M
+     Empirical comparison of maximal voxel and non-isotropic adjusted
+     cluster extent results in a voxel-based morphometry study of comorbid
+     learning disability with schzophrenia
+     NeuroImage 28: 544-552 (2005)
+
+
+------------------------------------------------------------------------
+Last Updated: February 11, 2008
+By Satoru Hayasaka, 
+   ANSIR Laboratory, Wake Forest University
+   Winston-Salem, North Carolina, USA
+   http://www.fmri.wfubmc.edu/
+
+
+
+

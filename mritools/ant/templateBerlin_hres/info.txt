@@ -1,0 +1,4 @@
+source: C:\Users\skoch\Desktop\SPMmouseBerlin3\templateBerlin_hres
+task: spmmouse to allen warped
+
+_sample.nii    : sample T2 in Allen Space (mouse 07) ...used to find the rotation

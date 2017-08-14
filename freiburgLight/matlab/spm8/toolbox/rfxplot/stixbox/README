@@ -1,0 +1,102 @@
+This is Stixbox 1.29. 
+All programs are released under GNU General Public License.
+
+The only documentation there is is the Contents-file and the
+help texts for the functions in the m-files themselves.
+
+For a guided tour try STIXDEMO. This unfortunately does not
+work under Octave since it uses Matlab graphics heavily. 
+
+=== Version 1.29 Changes from previous version =================
+
+- The algorithm in RGAMMA is replaced by a fast rejection method.
+
+=== Version 1.28 Changes from previous version =================
+
+- Added the function CAT2TBL.
+- Updated minor things in helptexts.
+
+=== Version 1.27 Changes from previous version =================
+
+- Fourth argument to LSFIT semantic extension to -1
+- Bug in RCHI2 corrected
+
+=== Version 1.26 Changes from previous version =================
+
+- Bug in PBETA corrected so that it gives a result also for 
+  pbeta(0,f1,f2).
+
+=== Version 1.25 Changes from previous version =================
+
+- New functions DGUMBEL, PGUMBEL, QGUMBEL, RGUMBEL, QQGUMBEL
+
+=== Version 1.24 Changes from previous version =================
+
+- CONTINCY contingency table analysis added.
+
+- QQNORM updated to work with many plot symbols.
+
+=== Version 1.23 Changes from previous version =================
+
+- Fixed return values for LINREG
+
+- CIBOOT updated to handle matrix valued function also for 
+  method == 6.
+
+- QUANTILE updated to accept also vector x and matrix p. And
+  a small fix made in method 3 so that it accepts input p=1. 
+
+- A new function PLOTEMPD plots empirical distribution.
+
+- More added functions: RANKTRF, COVAR, CORR, SPEARMAN, KAPLAMAI,
+  STDIZE.
+
+=== Version 1.22 Changes from previous version =================
+
+- Fixed identify to work correctly with string arrays.
+- Added IDENTIF5 to work with cell array input in Matlab 5.
+
+=== Version 1.2 Changes from previous version =================
+
+- A bug in pbinom gave the wrong answer for k = n-1. This is 
+  now corrected.
+
+- The function PAIRS now plots fast by avoiding slow handle 
+  graphics. 
+
+- There is a new function for estimating univariate mixtures
+  of normal distributions. 
+
+- Functions are added for Weibull and lognormal distribution.
+
+- Functions are added for Weibull and gamma paper plotting.
+
+
+=== Version 1.1 Changes from previous version =================
+
+- Upgraded to Matlab 5.2. It still runs under Matlab 4.x.
+
+- Some things are fixed so that it runs better under Octave.
+
+- LINREG updated so that it is more similar to LSFIT and not
+  relying on Mathwork's polyfit. 
+
+- QQPLOT can now handle datasets of different lengths.
+
+- TEST2R was updated to handle ties correctly, and a serious bug
+  was removed (datavalues 0 was erroneously removed earlier).
+
+=== Version 1.03. Changes from previous version =================
+
+- Regression intercept added as _last_ column instead, this
+  is more intuitive when looking at the parameter vector. Also,
+  polyfit does it that way.
+
+- Linreg is for polynomial regression also.
+
+- A nonparametric quantile confidence interval is included,
+  as well as the elementary binomial distribution functions.
+
+- The TEST1C is renamed to TEST1B and the previous stupid documentation
+  changed. 
+
