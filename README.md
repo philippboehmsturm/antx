@@ -45,7 +45,7 @@ ANTX uses the packages [SPM](http://www.fil.ion.ucl.ac.uk/spm/), [elastix](http:
 
 Scripts in the freiburgLight directory using SPM functions underly the GNU General Public License version 2 or (at your opinion) any later version. All other scripts in the FreiburgLight directory are owned by the Department of Radiology, Medical Physics, University Medical Center Freiburg and are free for academic and non-commercial use. Redistribution without consent of Department of Radiology, Medical Physics, University Medical Center Freiburg (contact persons [Marco Reisert](mailto:marco.reisert@uniklinik-freiburg.de) and [Dominik von Elverfeldt](mailto:dominik.elverfeldt@uniklinik-freiburg.de)) is not permitted.
 
-ANTX also includes the pvmatlab package of Bruker BioSpin GmbH, which is intended for Bruker users only. Please respect the legal issues in the manual within the pvtools\_bruker directory and request permission to use the package by Bruker&#39;s preclinical MRI [software customer support](mailto:mri-software-support@Bruker.com) before using ANTX. Otherwise please delete the directory pvtools\_bruker.
+ANTX also includes the pvmatlab package of Bruker BioSpin GmbH, which is intended for Bruker users only. Please respect the legal issues in the manual within the pvtools\_bruker directory and request permission to use the package by Bruker&#39;s preclinical MRI software customer support before using ANTX. Otherwise please delete the directory pvtools\_bruker.
 
 ## **Citation policy**
 
