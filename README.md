@@ -1,4 +1,6 @@
-#
+# Important Note: we moved to google drive, newer versions incl. documentation can be found here:
+https://drive.google.com/drive/folders/0B9o4cT_le3AhSFJRdUx3eXlyUWM
+
 # ANTX
 
 ANTX stands for **A** tlas **N** ormalization **T** oolbox using elasti **X**. It is a MATLAB toolbox for image registration of mouse magnetic resonance imaging data developed for research laboratories/departments.
