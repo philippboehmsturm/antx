@@ -1,4 +1,4 @@
-# Important note: read Only repository for documentation purposes. This version is no longer maintained, a newer version is available at https://github.com/ChariteExpMri/antx2
+# Important note: read only repository for documentation purposes. This version is no longer maintained, a newer version is available at https://github.com/ChariteExpMri/antx2
 
 # ANTX
 
