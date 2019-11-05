@@ -1,5 +1,4 @@
-# Important Note: we moved to google drive, newer versions incl. documentation can be found here:
-https://drive.google.com/drive/folders/0B9o4cT_le3AhSFJRdUx3eXlyUWM
+# Important Note: this version is no longer maintained, a newer version is available at https://github.com/ChariteExpMri/antx2
 
 # ANTX
 
